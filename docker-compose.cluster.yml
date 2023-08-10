@@ -6,7 +6,7 @@ services:
     volumes:
       - esvol1:/usr/share/elasticsearch/data
     ports:
-      - 9200:9200
+      - ${ES_PORT}:9200
     environment:
       - node.name=es01
       - cluster.name=es-cluster
@@ -73,12 +73,9 @@ services:
 volumes:
   esvol1:
     driver: local
-
   esvol2:
     driver: local
-
   esvol3:
     driver: local
-
   kibanadata:
     driver: local

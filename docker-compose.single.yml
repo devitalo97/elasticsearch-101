@@ -6,7 +6,7 @@ services:
     volumes:
       - esvol1:/usr/share/elasticsearch/data
     ports:
-      - 9200:9200
+      - ${ES_PORT}:9200
     environment:
       - xpack.security.enabled=false
       - discovery.type=single-node
